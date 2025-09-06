@@ -1,0 +1,5 @@
+include/ost-config.php
+*.sql
+*.key
+*.crt
+*.log
