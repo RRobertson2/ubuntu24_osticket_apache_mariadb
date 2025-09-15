@@ -3,3 +3,9 @@ include/ost-config.php
 *.key
 *.crt
 *.log
+web-snapshot/include/ost-config.php
+web-snapshot/setup/
+*.sql
+*.key
+*.crt
+*.log
