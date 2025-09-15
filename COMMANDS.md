@@ -8,3 +8,10 @@
 ```bash
 sudo apachectl configtest
 ```
+
+### 2025-09-14 19:14:33
+
+```bash
+$ sudo apachectl configtest
+sudo: apachectl: command not found
+```
