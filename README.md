@@ -1,3 +1,5 @@
+<img src="https://github.com/user-attachments/assets/851807f6-ed57-475c-a22f-5936f7c7629a" width="1000"><br>
+<br>
 # LAMP Stack Deployment with osTicket Helpdesk System
 
 ### Objective
