@@ -47,7 +47,6 @@ Secure Shell (SSH) allows remote access to the Linux server. We install, configu
 - Install OpenSSH server with sudo apt install openssh-server -y.
 - Provides secure remote login for system administration.
 - Start and enable SSH, configure authentication options, and test connectivity.<br>
-><br>
 
 <hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
 
@@ -128,22 +127,36 @@ Open necessary firewall ports for HTTP/HTTPS to allow clients to access osTicket
 
 <hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
 
-### Step 9: Verify Domain Assignment on Users
+### Step 9: Verify Installation and Access Installer
 
-Go to Users in Microsoft Entra ID, select a newly created user, and confirm their sign-in address uses the custom domain.<br>
+Confirm Apache is serving osTicket and verify URLs are reachable over HTTPS.<br>
 <br>
-- Verifies that the domain change has been applied to user accounts.
-- Confirms readiness for production email and login use.
-- Demonstrates successful domain branding in a live environment.<br>
+- Run curl -kI https://<server-ip>/.
+- Check service response before accessing installer.
+- Navigate to https://192.168.1.161/setup/install.php.<br>
 <br>
-<img src="https://github.com/user-attachments/assets/9cbe57a4-6aa6-4ba5-b0ad-194d1eb7ca9b" width="1000"><br>
+<img src="https://github.com/user-attachments/assets/5e84573f-0f0b-4a49-b9a3-a1c8309936ed" width="1000"><br>
 <br>
-<img src="https://github.com/user-attachments/assets/e04d2648-6390-424b-8951-07505ab66d26" width="1000"><br>
+<img src="https://github.com/user-attachments/assets/e416849b-7988-4bee-b6a2-b59def536fa9" width="1000"><br>
+
+<hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
+
+### Step 10: Complete Web Installer and Secure osTicket
+
+Run the osTicket web installer in browser, input database credentials, and finalize configuration. After installation, remove setup files and harden permissions.<br>
+<br>
+- Delete /var/www/osticket/setup and reset permissions on ost-config.php.
+- Prevent unauthorized access or reinstallation attempts.
+- Restrict file permissions and assign ownership back to www-data.<br>
+<br>
+<img src="https://github.com/user-attachments/assets/3eef067b-0b05-4a1f-a317-136ec367d324" width="1000"><br>
+<br>
+<img src="https://github.com/user-attachments/assets/2dc19fa4-83f6-45f3-802e-b92e0f2076f2" width="1000"><br>
 
 <hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
 
 
 **Keywords:** 
-azure-custom-domain microsoft-entra-id-setup azure-ad-domain-verification cloud-identity-management azure-tenant-branding dns-record-configuration godaddy-domain-setup custom-email-domain-azure azure-user-authentication microsoft-cloud-administration azure-identity-and-access-management
+#Ubuntu #UbuntuServer #LAMP #Apache #MariaDB #PHP #osTicket #Helpdesk #TicketingSystem #OpenSSL #SSLCertificate #Firewall #UFW #VirtualHosts #LinuxServer #ServerAdministration #SSH #RemoteAccess #IdentityManagement #WebDeployment #NetworkSecurity #SystemHardening
 
 
